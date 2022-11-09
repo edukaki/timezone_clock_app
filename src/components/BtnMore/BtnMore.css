@@ -1,0 +1,24 @@
+.c-btn__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 28px;
+    padding: .4rem .4rem .4rem 1.4rem;
+}
+
+.c-btn__container span{
+    color: var(--dark-gray);
+    font-size: .7rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.6rem;
+    letter-spacing: 3px;
+}
+
+.c-btn__container:hover{
+    cursor: pointer;
+}
+
+.c-btn__container:hover > span{
+    color: var(--gray);
+}
