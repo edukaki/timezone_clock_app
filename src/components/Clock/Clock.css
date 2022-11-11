@@ -1,0 +1,14 @@
+.c-clock__display{
+    display: flex;
+    align-items: baseline;
+}
+
+.c-clock__display h1{
+    display: inline-flex
+}
+
+.c-clock__display span{
+    font-size: 2rem;
+    font-weight: var(--weight-regular);
+    margin-left: 1rem;
+}
