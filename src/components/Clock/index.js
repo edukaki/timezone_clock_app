@@ -39,9 +39,14 @@ const Clock = () => {
         return <div>Updating...</div>
     } else {
         setInterval(clock, 1000);
-
+        const amPm = time.toLocaleTimeString('en-US').substring(8)
+        const hours = (time.getHours() % 12 || 12) >= 10 ? (time.getHours() % 12 || 12)  : "0" + (time.getHours() % 12 || 12)
+        const minutes = time.getMinutes() >= 10 ? time.getMinutes() : "0" + time.getMinutes()
         return (
-            <></>
+            <div className='c-clock__display'>
+                <h1>{hours}:{minutes}</h1>
+                <span>{amPm}</span>
+            </div>
         )
     }
 }
