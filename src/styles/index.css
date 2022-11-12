@@ -64,7 +64,32 @@ body {
   font-size: 18px;
   line-height: 1.6rem;
   color: var(--white);
+
+  background-image: url(/public/img/desktop/bg-image-nighttime.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.container{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.l-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: 3rem 6rem;
+
+}
+
+.l-column:nth-of-type(2){
+  align-items: flex-end;
+  display: flex;
+  justify-content: end;
 }
