@@ -1,56 +1,24 @@
-:root{
+:root {
   /* Color */
   --black: #000000;
+  --black--transparent: #00000075;
   --dark-gray: #303030;
-  --white: #FFFFFF;
-  --gray:#999999;
+  --white: #ffffff;
+  --white--transparent: #ffffff75;
+  --gray: #999999;
 
   /* Tipography */
   --weight-regular: 400;
   --weight-bold: 700;
-  --font-family: 'Inter', sans-serif;
+  --font-family: "Inter", sans-serif;
 
-
-}
-
-h1{
-  font-size: 11.1rem;
-  font-weight: var(--weight-bold);
-  letter-spacing: -5;
-  line-height: 11.1rem;
-}
-
-h2{
-  font-size: 3.1rem;
-  font-weight: var(--weight-bold);
-  line-height: 3.6rem;
-}
-
-h3{
-  font-size: 1.33                                                                                                                                                                                                                                     rem;
-  font-weight: var(--weight-bold);
-  line-height: 3.8rem;
-  letter-spacing: 4.8px;
-}
-
-h4{
-  font-size: 1.11rem;
-  font-weight: var(--weight-regular);
-  line-height: 3.6rem;
-  letter-spacing: 4px;
-}
-
-h5{
-  font-size: 1rem;
-  font-weight: var(--weight-bold);
-  line-height: 1.6rem;
-}
-
-h6{
-  font-size: .7rem;
-  font-weight: var(--weight-bold);
-  line-height: 1.6rem;
-  letter-spacing: 3px;
+  /* Images */
+  --desktop-night: url(../assets/img/desktop/bg-image-nighttime.jpg);
+  --desktop-day: url(../assets/img/desktop/bg-image-daytime.jpg);
+  --tablet-night: url(../assets/img/tablet/bg-image-nighttime.jpg);
+  --tablet-gay: url(../assets/img/tablet/bg-image-daytime.jpg);
+  --mobile-night: url(../assets/img/mobile/bg-image-nighttime.jpg);
+  --mobile-night: url(../assets/img/mobile/bg-image-daytime.jpg); 
 }
 
 body {
@@ -59,37 +27,44 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100%;
-  
+
   font-family: var(--font-family);
   font-size: 18px;
   line-height: 1.6rem;
   color: var(--white);
 
-  background-image: url(/public/img/desktop/bg-image-nighttime.jpg);
+  background-image: var(--desktop-night);
   background-repeat: no-repeat;
   background-size: cover;
-  
+  backdrop-filter: brightness(75%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container{
+.l-main {
   display: flex;
-  width: 100%;
+  flex-direction: column;
   height: 100vh;
 }
 
-.l-column{
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.container--active {
+  height: 100vh;
+}
+
+.l-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
   padding: 3rem 6rem;
-
 }
 
-.l-column:nth-of-type(2){
-  align-items: flex-end;
-  display: flex;
-  justify-content: end;
+.l-column:nth-of-type(2) {
+  align-items: center;
+  justify-content: flex-end;
 }
