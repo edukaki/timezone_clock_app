@@ -21,8 +21,8 @@ const BtnMore = () => {
             <span className='c-btn__text'>{!isActive ? "MORE" : "LESS"}</span>
             <div className='c-btn__arrow__container'>
                 {!isActive ?
-                    <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><circle fill={hoverColor} cx="20" cy="20" r="20" /><path stroke="#FFF" strokeWidth="2" fill="none" d="m14 21 6 6 6-6" /></g></svg> :
-                    <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><circle fill={hoverColor} cx="20" cy="20" r="20" /><path stroke="#FFF" strokeWidth="2" d="M14 23l6-6 6 6" /></g></svg>
+                    <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><circle fill={hoverColor} cx="20" cy="20" r="17" /><path stroke="#FFF" strokeWidth="2" fill="none" d="m14 19 6 6 6-6" /></g></svg> :
+                    <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><circle fill={hoverColor} cx="20" cy="20" r="17" /><path stroke="#FFF" strokeWidth="2" d="M14 23l6-6 6 6" /></g></svg>
                 }
             </div>
         </button>
