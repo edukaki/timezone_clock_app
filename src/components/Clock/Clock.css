@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
 }
-.c-clock__daytime p{
+
+.c-clock__daytime p {
     font-size: 1.2rem;
     font-weight: var(--weight-regular);
     letter-spacing: 4px;
@@ -11,29 +12,49 @@
     margin-left: 1rem;
 }
 
-.c-clock__time{
+.c-clock__time {
     display: flex;
     align-items: baseline;
     align-self: flex-end;
 }
 
-.c-clock__time h1{
+.c-clock__time h1 {
     font-size: 11.1rem;
     font-weight: var(--weight-bold);
     letter-spacing: -5px;
     margin: 4rem 0;
 }
 
-.c-clock__time span{
+.c-clock__time span {
     font-size: 2rem;
     font-weight: var(--weight-regular);
     margin-left: 1rem;
 }
 
-.c-clock__location{
+.c-clock__location {
     font-size: 1.5rem;
     font-weight: var(--weight-bold);
     text-transform: uppercase;
     letter-spacing: 4.8px;
     margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .c-clock__time h1 {
+        font-size: 9rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .c-clock__daytime p {
+        font-size: .9rem;
+    }
+
+    .c-clock__time h1 {
+        font-size: 6rem;
+    }
+
+    .c-clock__location {
+        font-size: 1.2rem;
+    }
 }
