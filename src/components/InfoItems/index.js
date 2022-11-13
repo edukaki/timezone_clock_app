@@ -3,7 +3,7 @@ import './InfoItems.css'
 
 const InfoItems = (props) => {
     return (
-        <div>
+        <div className='c-info-items'>
             <h2 className='c-info-items__title'>{props.title}</h2>
             <span className='c-info-items__description'>{props.description}</span>
         </div>
