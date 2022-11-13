@@ -1,9 +1,8 @@
 import React from 'react'
-import { useApi } from '../../api/useApi/useApi'
 import './Quotes.css'
 
-const Quotes = () => {
-    const [getQuotes] = useApi("https://programming-quotes-api.herokuapp.com/quotes/random");
+const Quotes = (props) => {
+    const getQuotes = props.quotes;
     return (
         <div className="c-quotes">
             <p>“{getQuotes.en}”</p>
