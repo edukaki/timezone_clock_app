@@ -3,7 +3,7 @@
     align-items: center;
 }
 .c-clock__daytime p{
-    font-size: .1.5rem;
+    font-size: 1.2rem;
     font-weight: var(--weight-regular);
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -18,12 +18,21 @@
 }
 
 .c-clock__time h1{
-    display: inline-flex;
-    line-height: 0;
+    font-size: 11.1rem;
+    font-weight: var(--weight-bold);
+    letter-spacing: -5px;
+    margin: 4rem 0;
 }
 
 .c-clock__time span{
     font-size: 2rem;
     font-weight: var(--weight-regular);
     margin-left: 1rem;
+}
+
+.c-clock__location{
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 4.8px;
 }
