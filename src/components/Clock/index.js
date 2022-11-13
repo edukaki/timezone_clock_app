@@ -39,8 +39,11 @@ const Clock = () => {
         const minutes = time.getMinutes() >= 10 ? time.getMinutes() : "0" + time.getMinutes()
         return (
             <div className='c-clock__display'>
+                {daytime()}
+                <div className='c-clock__time'>
                     <h1>{hours}:{minutes}</h1>
                     <span>{amPm}</span>
+                </div>
             </div>
         )
     }
