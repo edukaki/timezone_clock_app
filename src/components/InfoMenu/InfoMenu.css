@@ -1,0 +1,25 @@
+.c-info-menu{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black--transparent);
+    backdrop-filter: blur(20.4px);
+    transition: position 1s ease-in;
+}
+
+.c-info-menu--hide{
+    display: none;
+}
+
+.c-info-menu__column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 0 6rem;
+    margin: 3rem 0;
+}
+
+.c-info-menu__column:nth-of-type(2){
+    border-left: solid 3px #FFFFFF25;
+}
