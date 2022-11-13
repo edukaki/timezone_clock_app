@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useApi } from '../../api/useApi/useApi';
 import './Clock.css'
+import sun from '../../assets/img/icon/icon-sun.svg'
+import moon from '../../assets/img/icon/icon-moon.svg'
 
 const Clock = () => {
-
     const [dataClock, isLoaded, error] = useApi("http://worldtimeapi.org/api/ip");
-
     const [time, setTime] = useState(new Date())
 
     function displayClock() {
@@ -21,12 +21,12 @@ const Clock = () => {
     } else {
         setInterval(displayClock, 1000);
         const amPm = time.toLocaleTimeString('en-US').substring(8)
-        const hours = (time.getHours() % 12 || 12) >= 10 ? (time.getHours() % 12 || 12)  : "0" + (time.getHours() % 12 || 12)
+        const hours = (time.getHours() % 12 || 12) >= 10 ? (time.getHours() % 12 || 12) : "0" + (time.getHours() % 12 || 12)
         const minutes = time.getMinutes() >= 10 ? time.getMinutes() : "0" + time.getMinutes()
         return (
             <div className='c-clock__display'>
-                <h1>{hours}:{minutes}</h1>
-                <span>{amPm}</span>
+                    <h1>{hours}:{minutes}</h1>
+                    <span>{amPm}</span>
             </div>
         )
     }
