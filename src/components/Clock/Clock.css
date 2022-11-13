@@ -1,15 +1,28 @@
-.c-clock__display{
+.c-clock__daytime {
+    display: flex;
+    align-items: center;
+}
+.c-clock__daytime p{
+    font-size: .1.5rem;
+    font-weight: var(--weight-regular);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    margin-left: 1rem;
+}
+
+.c-clock__time{
     display: flex;
     align-items: baseline;
     align-self: flex-end;
 }
 
-.c-clock__display h1{
+.c-clock__time h1{
     display: inline-flex;
     line-height: 0;
 }
 
-.c-clock__display span{
+.c-clock__time span{
     font-size: 2rem;
     font-weight: var(--weight-regular);
     margin-left: 1rem;
