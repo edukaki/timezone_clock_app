@@ -14,6 +14,20 @@ const Clock = () => {
         setTime(newTime);
     }
 
+    function daytime() {
+        return (
+            <div className='c-clock__daytime'>
+                <img src={time.getHours() >= 5 && time.getHours() < 18 ? sun : moon} alt='daytime' />
+                <p>
+                    {time.getHours() >= 5 && time.getHours() < 12 ? "Good morning" :
+                        time.getHours() >= 12 && time.getHours() < 18 ? "Good afternoon" :
+                            "Good evening"}
+                    , it's currently
+                </p>
+            </div>
+        )
+    }
+
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
