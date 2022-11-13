@@ -1,20 +1,22 @@
 import BtnMore from "./components/BtnMore";
 import Clock from "./components/Clock";
+import InfoMenu from "./components/InfoMenu";
+import Quotes from "./components/Quotes"
 
 function App() {
   return (
-    <div className="container">
-      <div className="l-column">
-        <div className="c-title">
-          <p>“The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.”</p>
-          <h5>Ada Lovelace</h5>
+    <main className="l-main">
+      <div className="container container--active">
+        <div className="l-column">
+          <Quotes />
+          <Clock />
         </div>
-        <Clock />
+        <div className="l-column">
+          <BtnMore />
+        </div>
       </div>
-      <div className="l-column">
-        <BtnMore />
-      </div>
-    </div>
+        <InfoMenu />
+    </main>
   );
 }
 
