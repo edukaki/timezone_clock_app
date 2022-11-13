@@ -6,6 +6,7 @@ import moon from '../../assets/img/icon/icon-moon.svg'
 
 const Clock = () => {
     const [dataClock, isLoaded, error] = useApi("http://worldtimeapi.org/api/ip");
+    const [location] = useApi("https://api.ipgeolocation.io/ipgeo?apiKey=51765e4a180b43ed9c232935a781ac71")
     const [time, setTime] = useState(new Date())
 
     function displayClock() {
