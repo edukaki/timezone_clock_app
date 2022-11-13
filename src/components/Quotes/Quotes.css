@@ -1,3 +1,7 @@
 .c-quotes span{
     font-weight: var(--weight-bold);
 }
+
+.c-quotes--hide{
+    display: none;
+}
