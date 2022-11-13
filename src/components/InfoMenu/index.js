@@ -1,11 +1,10 @@
 import React from 'react'
-import { useApi } from '../../api/useApi/useApi'
 import InfoItems from '../InfoItems'
 import './InfoMenu.css'
 
 
-const InfoMenu = () => {
-  const [data] = useApi("http://worldtimeapi.org/api/ip");
+const InfoMenu = (props) => {
+  const data = props.data;
   return (
     <section className='c-info-menu c-info-menu--hide'>
       <div className='c-info-menu__column'>

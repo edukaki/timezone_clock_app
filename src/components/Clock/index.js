@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { useApi } from '../../api/useApi/useApi';
 import './Clock.css'
 import sun from '../../assets/img/icon/icon-sun.svg'
 import moon from '../../assets/img/icon/icon-moon.svg'
 
-const Clock = () => {
-    const [dataClock, isLoaded, error] = useApi("http://worldtimeapi.org/api/ip");
-    const [location] = useApi("https://api.ipgeolocation.io/ipgeo?apiKey=51765e4a180b43ed9c232935a781ac71")
+const Clock = (props) => {
+    const location = props.location;
+    const dataClock = props.dataClock;
+    const isLoaded = props.isLoaded;
+    const error = props.error;
+
     const [time, setTime] = useState(new Date())
 
     function displayClock() {
