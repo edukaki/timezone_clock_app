@@ -45,6 +45,7 @@ const Clock = () => {
                     <h1>{hours}:{minutes}</h1>
                     <span>{amPm}</span>
                 </div>
+                <p className='c-clock__location'>in {location.city}, {location.country_code2}</p>
             </div>
         )
     }
