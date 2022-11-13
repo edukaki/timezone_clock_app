@@ -35,4 +35,5 @@
     font-weight: var(--weight-bold);
     text-transform: uppercase;
     letter-spacing: 4.8px;
+    margin-bottom: 0;
 }
