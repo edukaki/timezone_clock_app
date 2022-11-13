@@ -1,25 +1,23 @@
 import React, { useState } from 'react'
 import './BtnMore.css'
 
-
 const BtnMore = () => {
     const quotes = document.querySelector(".c-quotes");
     const infoMenu = document.querySelector(".c-info-menu");
     const clockArea = document.querySelector(".container");
     const [isActive, setIsActive] = useState(false);
     const [hoverColor, setHoverColor] = useState("#303030")
-    console.log(infoMenu)
 
     return (
         <button className='c-btn__container'
             onMouseEnter={() => { setHoverColor("#999999") }}
             onMouseLeave={() => { setHoverColor("#303030") }}
-            onClick={() => { 
+            onClick={() => {
                 setIsActive(!isActive);
                 quotes.classList.toggle("c-quotes--hide");
                 infoMenu.classList.toggle("c-info-menu--hide");
                 clockArea.classList.toggle("container--active");
-                }}>
+            }}>
             <span className='c-btn__text'>{!isActive ? "MORE" : "LESS"}</span>
             <div className='c-btn__arrow__container'>
                 {!isActive ?
