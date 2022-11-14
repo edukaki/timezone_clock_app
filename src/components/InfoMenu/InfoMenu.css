@@ -4,8 +4,8 @@
     max-height: 100vh;
     width: 100%;
     background: var(--black--transparent);
-    backdrop-filter: blur(20.4px);
-    /* transition: position 1s ease-in; */
+    backdrop-filter: blur(20px);
+    color: var(--info-white);
 }
 
 .c-info-menu--hide{
@@ -22,7 +22,7 @@
 }
 
 .c-info-menu__column:nth-of-type(2){
-    border-left: solid 3px #FFFFFF25;
+    border-left: solid 3px var(--border-white--transparent);
 }
 
 @media screen and (max-width:768px) {

@@ -52,6 +52,7 @@
 
     .c-clock__time h1 {
         font-size: 6rem;
+        margin: 3rem 0;
     }
 
     .c-clock__location {
