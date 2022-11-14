@@ -15,8 +15,9 @@ const Clock = (props) => {
         const newTime = new Date()
         newTime.setHours(newTime.getUTCHours() + parseInt(dataClock.utc_offset.substr(0, 3)))
         setTime(newTime);
+        {props.getDayTime(newTime.getHours() >= 5 && newTime.getHours() < 18 ? "light" : "dark")}
     }
-
+    
     function daytime() {
         return (
             <div className='c-clock__daytime'>
@@ -24,13 +25,13 @@ const Clock = (props) => {
                 <p>
                     {time.getHours() >= 5 && time.getHours() < 12 ? "Good morning" :
                         time.getHours() >= 12 && time.getHours() < 18 ? "Good afternoon" :
-                            "Good evening"}
+                        "Good evening"}
                     , it's currently
                 </p>
             </div>
         )
     }
-
+    
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
