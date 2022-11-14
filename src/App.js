@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useApi } from "./api/useApi/useApi";
 import BtnMore from "./components/BtnMore";
 import Clock from "./components/Clock";
