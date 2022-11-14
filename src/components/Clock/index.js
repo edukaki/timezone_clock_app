@@ -15,7 +15,7 @@ const Clock = (props) => {
         const newTime = new Date()
         newTime.setHours(newTime.getUTCHours() + parseInt(dataClock.utc_offset.substr(0, 3)))
         setTime(newTime);
-        {props.getDayTime(newTime.getHours() >= 5 && newTime.getHours() < 18 ? "light" : "dark")}
+        props.getDayTime(newTime.getHours() >= 5 && newTime.getHours() < 18 ? "light" : "dark")
     }
     
     function daytime() {
