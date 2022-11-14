@@ -4,8 +4,13 @@
   --black--transparent: #00000075;
   --dark-gray: #303030;
   --white: #ffffff;
-  --white--transparent: #ffffff75;
+  --white--transparent: #FFFFFF85;
   --gray: #999999;
+
+  --info-white: #FFFFFF;
+  --info-black: #000000;
+  --border-white--transparent: #FFFFFF25;
+  --border-black--transparent: #00000025;
 
   /* Tipography */
   --weight-regular: 400;
@@ -19,25 +24,39 @@
   --tablet-day: url(../assets/img/tablet/bg-image-daytime.jpg);
   --mobile-night: url(../assets/img/mobile/bg-image-nighttime.jpg);
   --mobile-day: url(../assets/img/mobile/bg-image-daytime.jpg); 
+  
 }
+*{
+  
+}
+/* DARK MODE */
 
+.light{
+  --desktop-night: var(--desktop-day);
+  --tablet-night: var(--mobile-day);
+  --mobile-night: var(--mobile-day);
+  --black--transparent: var(--white--transparent);
+  --border-white--transparent: var(--border-black--transparent);
+  --info-white: var(--info-black);
+}
+/*  */
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 
+  color: var(--white);
   font-family: var(--font-family);
   font-size: 18px;
   line-height: 1.6rem;
-  color: var(--white);
-
-  background-image: var(--desktop-night);
+  
+  background: var(--desktop-night);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  backdrop-filter: brightness(75%);
+  backdrop-filter: brightness(50%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -71,11 +90,7 @@ body {
 }
 
 
-@media screen and (max-width:1440px) {
-  body {
-    background-image: var(--tablet-night);
-  }
-  
+@media screen and (max-width:1439px) {
   .container{
     flex-direction: column;
   }
@@ -91,6 +106,12 @@ body {
   
   .l-column:nth-of-type(2){
     align-items: flex-start;
+  }
+}
+
+@media screen and (max-width:940px) {
+  body {
+    background-image: var(--tablet-night);
   }
 }
 
